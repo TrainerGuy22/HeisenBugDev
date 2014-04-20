@@ -1,5 +1,7 @@
 = render 'layouts/mod_header', {:project => @project}
 .large-12.columns
+  %div{'ng-controller' => 'ProjectsCtrl'}
+    %h1 {{project}}
   .row
     .large-3.columns
       %h3.blue-text Developers

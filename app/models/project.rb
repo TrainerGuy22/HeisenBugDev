@@ -24,6 +24,12 @@ class Project < ActiveRecord::Base
       :maximum => 0.5.megabytes.to_i
     }
 
+    def as_json(options = {})
+      h = super(options)
+      h[:users] = self.users.collect { |u| u.name }
+      h
+    end
+
   has_and_belongs_to_many :users
   has_many :builds, :dependent => :destroy
   has_many :versions, :dependent => :destroy

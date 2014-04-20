@@ -26,6 +26,9 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 0.3.37)
     addressable (2.3.6)
+    angular-rails (0.0.12)
+      coffee-script (~> 2.2.0)
+      rails
     annotate (2.6.2)
       activerecord (>= 2.3.0)
       rake (>= 0.8.7)
@@ -426,6 +429,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  angular-rails
   annotate (~> 2.6.2)
   better_errors
   binding_of_caller

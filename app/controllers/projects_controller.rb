@@ -1,8 +1,14 @@
 class ProjectsController < ApplicationController
+  respond_to :html, :xml, :json
   autocomplete :user, :name
   acts_as_token_authentication_handler_for User
   before_filter :authenticate_entity_from_token!, :only => [:edit, :update]
   before_filter :authenticate_entity!, :only => [:edit, :update]
+
+  def index
+    @projects = Project.all
+    respond_with(@projects)
+  end
 
   def edit
     @project = Project.find(params[:id])
@@ -13,6 +19,7 @@ class ProjectsController < ApplicationController
 
   def show
     @project = Project.find(params[:id])
+    respond_with(@project)
   end
 
   def new

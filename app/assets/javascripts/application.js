@@ -10,12 +10,15 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require angular
+//= require angular-resource
+//= require app
+//= require_tree ./angular
 //= require jquery
 //= require jquery_ujs
 //= require jquery.ui.all
 //= require foundation
 //= require turbolinks
-//= require_tree .
 $(document).on('ready page:load', function () {
   $("div[id^='flash_']").delay(3000).slideUp();
 });

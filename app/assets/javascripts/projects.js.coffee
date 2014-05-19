@@ -32,3 +32,4 @@ $ ->
       $(this).width($(this).find('span').width() + 20) if $(this).find('span').width() > 200
     $('span[class$=-repo]').parent().mouseout ->
       $(this).css('width', '') if $(this).width() > 220
+    $('#main-content > *.columns:nth-child(2)').css('min-height', $('#left-sidebar').css('height'))

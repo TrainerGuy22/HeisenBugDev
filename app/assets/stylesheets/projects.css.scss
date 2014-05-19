@@ -68,9 +68,9 @@ ul.ui-autocomplete {
 }
 
 .blue-text {
-  font-weight: 500;
-  color: #3b3877;
-  border-bottom: 2px solid #3b3877;
+  font-weight: 300;
+  color: #008CBA;
+  border-bottom: 1px solid #008CBA;
 }
 
 .code-repo {
@@ -87,8 +87,7 @@ ul.ui-autocomplete {
 
 .repo-outer {
   padding: 10px;
-  border-bottom: 2px solid #8e5a26;
-  background-color: #fece8f;
+  background-color: rgb(221,221,221);
   border-radius: 5px;
   white-space:nowrap;
   overflow:hidden;
@@ -98,7 +97,7 @@ ul.ui-autocomplete {
   z-index: 1;
 
   &:hover {
-    background-color: #ecb06b;
+    background-color: #eee;
     overflow: visible;
   }
 }
@@ -137,6 +136,24 @@ ul.ui-autocomplete {
   }
 }
 
+main {
+  padding: 0 !important;
+  background-color: rgb(230,230,230);
+}
+
 #left-sidebar {
-  background-color: #c28c4d;
+  padding-right: 19px;
+  padding-left: 0px;
+}
+
+#main-content {
+  & > *.columns {
+    padding-top: 1em;
+    padding-bottom: 32px;
+  }
+
+  & > *.columns:nth-child(2) {
+    background-color: #eee;
+    height: 100%;
+  }
 }
